@@ -1,0 +1,25 @@
+.searchList{
+    /* display: flex; */
+    width: 440px;
+    height: 100px;
+    overflow-y: auto;
+    gap: 3px;
+    position: absolute;
+    /* flex-direction: column; */
+    background-color: white;
+    border-radius: 5px;
+    z-index: 2;
+    top: 50px;
+    margin-left: 10px;
+}
+.items{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-left: 3px;
+}
+.items:hover{
+    background-color: beige;
+}

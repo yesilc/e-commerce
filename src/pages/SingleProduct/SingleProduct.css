@@ -7,6 +7,7 @@
   .single-product-ad {
     width: 100%;
     margin-bottom: 10px;
+    height: 150px;
   }
   .single-product {
     display: flex;
@@ -39,12 +40,12 @@
   }
   
   .single-product-info > button {
-    background: #f0c14b;
+    background: #36bbc2;
     border: 1px solid;
     margin-top: 40px;
     min-width: 150px;
     color: #111;
-    border-color: #a88734 #9c7e31 #846a29;
+    border-color: #36bbc2 #36bbc2 #294c84;
     cursor: pointer;
   }
   

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import './Register.css'
-import AmazonLogo from '../../Amazon_Logo.png';
+import Logo from '../../components/Header/logo-no-background.png';
 import { useSelector, useDispatch } from 'react-redux';
 import { registerInitiate } from '../../redux/actions';
 
@@ -29,7 +29,7 @@ const Register = () => {
   return (
     <div className='register'>
       <Link to="/">
-        <img src={AmazonLogo} className='register-logo' alt='logo'></img>
+        <img src={Logo} className='register-logo' alt='logo'></img>
       </Link>
       <div className='register-container'>
         <h1>Create Account</h1>

@@ -3,6 +3,8 @@ import './CheckoutProduct.css'
 import { useDispatch } from 'react-redux'
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined"
 import { removeFromBasket } from '../../redux/actions'
+import HighlightOffIcon from '@material-ui/icons/HighlightOff';
+
 
 const CheckoutProduct = ({ id, title, image, rating, price, hideButton }) => {
     
@@ -28,7 +30,7 @@ const CheckoutProduct = ({ id, title, image, rating, price, hideButton }) => {
                 {!hideButton && (
                     <button onClick={removeItemFromBasket}>
                     <i>
-                        <ShoppingCartOutlinedIcon></ShoppingCartOutlinedIcon>
+                        <HighlightOffIcon></HighlightOffIcon>
                     </i>
                     Remove from Basket
                 </button>

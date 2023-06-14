@@ -15,6 +15,12 @@ import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import Loading from './components/Loading/Loading';
 // import Orders from './pages/Orders/Orders';
+import AddProduct from './pages/AddProduct/AddProduct';
+import MyProducts from './pages/MyProducts/MyProducts';
+import EditProduct from './pages/EditProduct/EditProduct';
+import { RouterRounded } from '@material-ui/icons';
+import CategoryPage from './pages/HeaderPages/CategoryPage';
+import {SearchDrop} from './components/SearchDrop/SearchDrop';
 
 const Home = lazy(() => import("./pages/Home/Home"));
 const Login = lazy(() => import("./pages/Login/Login"));
@@ -23,6 +29,7 @@ const Checkout = lazy(() => import("./pages/Checkout/Checkout"));
 const Payment = lazy(() => import("./pages/Payment/Payment"));
 const Orders = lazy(() => import("./pages/Orders/Orders"));
 const SingleProduct = lazy(() => import("./pages/SingleProduct/SingleProduct"));
+
 
 const promise = loadStripe("pk_test_51LGMptLX8pgv5PhTRkhFJke2vKr89xDlnh45vZGE99T4q89eEEcwWKW2r9AvYb8R0Y0yMVl2pmb5TLmrorKYpG5G00kd14MHg6")
 
@@ -44,10 +51,15 @@ function App() {
           <Route path='/' element={<><Header></Header><Home></Home></>}></Route>
           <Route path='/login' element={<Login></Login>}></Route>
           <Route path='/register' element={<Register></Register>}></Route>
-          <Route path='/product/:id' element={<><Header></Header><SingleProduct></SingleProduct></>}></Route>
+          <Route path='/product/:_id' element={<><Header></Header><SingleProduct></SingleProduct></>}></Route>
           <Route path='/checkout' element={<><Header></Header><Checkout></Checkout></>}></Route>
           <Route path='/payment' element={<><Header></Header><Elements stripe={promise}><Payment></Payment></Elements></>}></Route>
           <Route path='/orders' element={<><Header></Header><Orders></Orders></>}></Route>
+          <Route path='/addproduct' element={<AddProduct></AddProduct>}></Route>
+          <Route path='/myproducts' element={<><Header></Header><MyProducts></MyProducts></>}></Route>
+          <Route path='/editProduct/:_id' element={<EditProduct></EditProduct>}></Route>
+          <Route path='/category/:item' element={<><Header></Header><CategoryPage></CategoryPage></>}></Route>
+          <Route path='/search' element={<SearchDrop></SearchDrop>}></Route>
         </Routes>
       </Suspense>
     </div>

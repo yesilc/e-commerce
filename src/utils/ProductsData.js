@@ -115,17 +115,20 @@ const products = [
 
 const headerItems = [
   "All",
-  "BestSeller",
   "Mobiles",
-  "Prime",
   "Electronic",
   "Fashion",
   "New Releases",
-  "Customer Service",
-  "Amazon Pay",
   "Computers",
   "Home & Kitchen",
-  "Today's Deals",
 ];
 
-export { products, headerItems };
+const headerItemsOb = [
+  {value:"Mobiles",label:"Mobiles"},
+  {value:"Electronic",label:"Electronic"},
+  {value:"Fashion",label:"Fashion"},
+  {value:"Computers",label:"Computers"},
+  {value:"Home & Kitchen",label:"Home & Kitchen"},
+];
+
+export { products, headerItems,headerItemsOb };

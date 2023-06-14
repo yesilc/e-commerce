@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Login.css';
 import { Link, useNavigate } from 'react-router-dom';
-import AmazonLogo from "../../Amazon_Logo.png";
+import Logo from "../../components/Header/logo-no-background.png";
 import { useSelector, useDispatch } from 'react-redux';
 import { loginInitiate } from '../../redux/actions';
 const Login = () => {
@@ -29,7 +29,7 @@ const Login = () => {
     return (
         <div className='login'>
             <Link to='/'>
-                <img src={AmazonLogo} className='login-logo' alt='logo'></img>
+                <img src={Logo} className='login-logo' alt='logo'></img>
             </Link>
             <div className='login-container'>
                 <h1>Sign in</h1>
@@ -42,11 +42,11 @@ const Login = () => {
                 <button type='submit' onClick={signIn} className='login-signIn'>
                     Sign In
                 </button>
-                <p>By continuing, you agree to Amazon's Conditions of Use and Privacy Notice.</p>
+                <p>By continuing, you agree to E-COMMERCE's Conditions of Use and Privacy Notice.</p>
             </div>
-            <p>New to Amazon ?</p>
+            <p>New to E-COMMERCE ?</p>
             <Link to="/register">
-                <button className='login-register'>Create Your Amazon Account</button>
+                <button className='login-register'>Create Your E-COMMERCE Account</button>
             </Link>
         </div>
     )

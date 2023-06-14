@@ -1,0 +1,6 @@
+.home-row{
+    max-width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}

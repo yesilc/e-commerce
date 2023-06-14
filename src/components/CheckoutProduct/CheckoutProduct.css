@@ -24,13 +24,13 @@
   }
   
   .checkout-product-info > button {
-    background: #f0c14b;
+    background: #36bbc2;
     border: 1px solid;
     margin-top: 10px;
     width: 180px;
     color: #111;
     cursor: pointer;
-    border-color: #a88734 #9c7e31 #846a29;
+    border-color: gainsboro;
   }
   
   i {

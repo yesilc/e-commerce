@@ -21,7 +21,7 @@ const Payment = () => {
     const [processing, setProcessing] = useState("");
     const [error, setError] = useState(null);
     const [disabled, setDisabled] = useState(true);
-    const [clientSecret, setClientSecret] = useState("");
+    const [clientSecret, setClientSecret] = useState();
 
     useEffect(() => {
         const getClientSecret = async () =>{
@@ -42,7 +42,7 @@ const Payment = () => {
         setProcessing(true);
         const payload = await stripe.confirmCardPayment(clientSecret,{
             payment_method : {
-                card: element.getElement(CardElement),
+                 card: element.getElement(CardElement),
             },
         }).then(({paymentIntent}) =>{
             db.collection("users").doc(user && user.uid).collection("orders").doc(paymentIntent.id)

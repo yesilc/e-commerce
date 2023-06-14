@@ -1,0 +1,9 @@
+.home-row{
+    max-width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}

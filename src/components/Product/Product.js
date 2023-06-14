@@ -5,11 +5,11 @@ import ShoppingCartItemOutlinedIcon from "@material-ui/icons/ShoppingCartOutline
 import {useDispatch} from "react-redux";
 import { addToBasket } from '../../redux/actions';
 
-const Product = ({ id, title, image, price, rating, specification, detail }) => {
+const Product = ({ _id, title, image, price, rating, specification, detail }) => {
     const dispatch = useDispatch();
     const onAddItemToTheBasket = () => {
         const item = {
-            id,
+            _id,
             title,
             image,
             price,
@@ -22,7 +22,7 @@ const Product = ({ id, title, image, price, rating, specification, detail }) => 
     return (
         <div className="product">
             <div className="info">
-                <Link to={`/product/${id}`} className='title'>
+                <Link to={`/product/${_id}`} className='title'>
                     <p>{title}</p>
                 </Link>
                 <p className='price'>

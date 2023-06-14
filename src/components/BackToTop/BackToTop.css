@@ -15,10 +15,13 @@
     }
   }
   .back-top-container {
+    display: flex;
     height: 40px;
-    text-align: center;
+    padding-bottom: 2px;
+    justify-content: center;
+    align-items: center;
     width: 1300px;
-    background-color: #37475a;
+    background-color: #80a0f7;
     color: white;
     margin-right: 15px;
   }
