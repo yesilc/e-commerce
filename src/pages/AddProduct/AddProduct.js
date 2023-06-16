@@ -14,7 +14,7 @@ const AddProduct = () => {
     const [detail, setDetail] = useState("");
     const [image, setImage] = useState("");
     const [type, setType] = useState("BOS");
-    const [userEmail, setUser] = useState("");
+    const [userEmail, setUser] = useState("omercan_yesil@hotmail.com");
 
     const{user} = useSelector((state) => state.data)
 

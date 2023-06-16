@@ -20,6 +20,8 @@ const Header = () => {
     const [searchInput, setSearchInput] = useState("");
     const[focus, setFocus] = useState(false);
 
+    const userVar = "searchUser";
+
     useEffect(() => {
         fetch("http://localhost:5000/")
             .then((res) => res.json())
@@ -67,8 +69,8 @@ const Header = () => {
             </div>
 
             <div className='search' onFocus={() =>setFocus(true)} onBlur={focusOut}>
-                <input onChange={(e) => setSearchInput(e.target.value)}  type="text" className='searchInput'></input>
-                <SearchIcon className='searchIcon'></SearchIcon>
+                <input onChange={(e) => setSearchInput(e.target.value)}  type="text" className="searchInput"></input>
+                <SearchIcon className={user? userVar : "searchIcon"}></SearchIcon>
                 {focus &&
                 <SearchDrop className='searchDrop'
                     data={products}
